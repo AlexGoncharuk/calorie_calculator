@@ -1,7 +1,11 @@
 /node_modules/
-.idea/
 /dist/
 /.git/
 /app/css/
 /**/*.psd
 /**/Thumbs.db
+
+# IntellijIdea files
+*.iml
+.idea
+out
