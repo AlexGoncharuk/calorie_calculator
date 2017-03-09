@@ -3,8 +3,11 @@ $(function() {
     $(document).ready(function(){
             var  rasdm = [];
             $('.cbtn').on('click', function(){
+
                 var classes = [];
-                var cl = function(){
+
+                //grabb the volues
+                (function(){
                     return classes = [
                         $('.wBread').val(),
                         $('.bBread').val(),
@@ -33,41 +36,38 @@ $(function() {
                         $('.chickenS').val(),
                         $('.borscht').val()
                     ];
-                };
-                var products = [];
-                var pr = function(){
-                    return products = [
-                        /*"whiteBread" :*/ [0.075, 0.03, 0.51, 2.64],
-                        /*"blackBread" :*/ [0.066, 0.012, 0.396, 1.98],
+                })();
 
-                        /*"buckwheat" :*/ [0.126, 0.03, 0.68, 3.39],
-                        /*"rise" :*/ [0.07, 0.008, 0.79, 3.44],
-                        /*"oatmeal" :*/ [0.135, 0.07, 0.587, 3.52],
-                        /*"wheat" :*/ [0.11, 0.012, 0.685, 3.29],
-                        /*"peas" :*/ [0.22, 0.022, 0.529, 3.33],
-                        /*"pasta" :*/ [0.11, 0.016, 0.684, 3.33],
+                var products = [
+                    /*"whiteBread" :*/ [0.075, 0.03, 0.51, 2.64],
+                    /*"blackBread" :*/ [0.066, 0.012, 0.396, 1.98],
 
-                        /*"breast" :*/ [0.236, 0.019, 0.004, 1.13],
-                        /*"liver" :*/ [0.19, 0.063, 0.014, 1.4],
-                        /*"heart" :*/ [0.158, 0.103, 0.008, 1.59],
-                        /*"egg" :*/ [0.127, 0.109, 0.007, 1.57],
-                        /*"wing" :*/ [0.192, 0.122, 0, 1.86],
+                    /*"buckwheat" :*/ [0.126, 0.03, 0.68, 3.39],
+                    /*"rise" :*/ [0.07, 0.008, 0.79, 3.44],
+                    /*"oatmeal" :*/ [0.135, 0.07, 0.587, 3.52],
+                    /*"wheat" :*/ [0.11, 0.012, 0.685, 3.29],
+                    /*"peas" :*/ [0.22, 0.022, 0.529, 3.33],
+                    /*"pasta" :*/ [0.11, 0.016, 0.684, 3.33],
 
-                        /*"potato" :*/ [0.02, 0.004, 0.181, 0.8],
-                        /*"tomato" :*/ [0.006, 0.002, 0.042, 0.2],
-                        /*"cucumber" :*/ [0.008, 0.001, 0.028, 0.15],
-                        /*"cabbage" :*/ [0.018, 0.001, 0.047, 0.27],
-                        /*"onion" :*/ [0.014, 0, 0.104, 0.41],
+                    /*"breast" :*/ [0.236, 0.019, 0.004, 1.13],
+                    /*"liver" :*/ [0.19, 0.063, 0.014, 1.4],
+                    /*"heart" :*/ [0.158, 0.103, 0.008, 1.59],
+                    /*"egg" :*/ [0.127, 0.109, 0.007, 1.57],
+                    /*"wing" :*/ [0.192, 0.122, 0, 1.86],
 
-                        /*"peasSoup" :*/ [0.044, 0.024, 0.089, 0.66],
-                        /*"cabbageSoup" :*/ [0.02, 0.026, 0.04, 0.466],
-                        /*"chickenSoup" :*/ [0.03, 0.015, 0.051, 0.45],
-                        /*"borscht" :*/ [0.011, 0.022, 0.067, 0.49]
-                    ];
-                };
-                cl();
-                pr();
+                    /*"potato" :*/ [0.02, 0.004, 0.181, 0.8],
+                    /*"tomato" :*/ [0.006, 0.002, 0.042, 0.2],
+                    /*"cucumber" :*/ [0.008, 0.001, 0.028, 0.15],
+                    /*"cabbage" :*/ [0.018, 0.001, 0.047, 0.27],
+                    /*"onion" :*/ [0.014, 0, 0.104, 0.41],
 
+                    /*"peasSoup" :*/ [0.044, 0.024, 0.089, 0.66],
+                    /*"cabbageSoup" :*/ [0.02, 0.026, 0.04, 0.466],
+                    /*"chickenSoup" :*/ [0.03, 0.015, 0.051, 0.45],
+                    /*"borscht" :*/ [0.011, 0.022, 0.067, 0.49]
+                ];
+
+                //calculate
                 var p = 0, f = 0, ch = 0, kl = 0;
 
                 for(var i = 0; i <= classes.length; i++){
@@ -78,12 +78,14 @@ $(function() {
                         kl = +(kl + +(products[i][3] * classes[i])).toFixed(2);
                     }
                 }
+
+                //write to right module
                 if( p && f && ch && kl != 0){
                     rasdm.push(p, f, ch, kl);
 
-                    var rasd = function(){
+                    (function(){
 
-                        var tot = function () {
+                        (function () {
                             if(rasdm.length == 4) {
                                 return [
                                     $('.t1').text(+(rasdm[0]).toFixed(2)),
@@ -127,9 +129,7 @@ $(function() {
                                     $('.t4').text(+(rasdm[3] + rasdm[7] + rasdm[11] + rasdm[15] + rasdm[19] + rasdm[23]).toFixed(2))
                                 ];
                             }
-                        };
-
-                        tot();
+                        })();
 
                         return [
                             $('.11').text(rasdm[0]),
@@ -162,8 +162,7 @@ $(function() {
                             $('.63').text(rasdm[22]),
                             $('.64').text(rasdm[23])
                         ];
-                    };
-                    rasd();
+                    })();
                 }
 
                 $('.rrbtn').on('click', function () {
