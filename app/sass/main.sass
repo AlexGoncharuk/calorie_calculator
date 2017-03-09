@@ -1,0 +1,115 @@
+@import "bourbon"
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	overflow-x: hidden
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+//You're code
+
+body
+	background: url("../img/Food-Wallpaper.jpg") no-repeat right top fixed
+	margin-top: 30px
+
+.mblock, .rblock
+	background: $main-bg
+	border: 1px solid $main-bg
+	border-radius: 10px
+	text-align: center
+	margin: 30px 1% 30px 0
+	h1
+		margin: 30px 0
+	.table
+		border-radius: 10px
+		width: 100%
+		background: $main-bg
+		//font-size: 18px
+
+
+.mblock
+	.table
+		thead
+			th
+				width: 50%
+		input
+			width: 90%
+			background: $main-bg
+			border: 1px solid rgba(0, 0, 0, 0.3)
+			border-radius: 6px
+
+.forms
+	text-align: center
+	font-weight: bold
+	input
+		width: 50%
+		background: $main-bg
+		&:last-child
+			margin-bottom: 30px
+
+.dbtn
+	text-align: center
+
+
+
+.rblock
+	padding: 0 30px 30px 30px
+	.table
+		th
+			width: 22%
+			text-align: center
+		th:first-child
+			width: 12%
+
+
+@import "media" // Всегда в конце
+
+@media only screen and (min-width : 1200px)
+	.mblock
+		.rightCol
+			margin-left: -2%
+			width: 52%
+
+	.rblock
+		margin-left: -5%
+
+@media only screen and (min-width : 1200px) and (max-width: 1300px)
+	.rblock
+		padding-left: 9%
+		padding-right: 9%

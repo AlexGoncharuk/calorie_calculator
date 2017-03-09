@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Calorizator</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+</head>
+
+<body>
+
+	<div class="row container-fluid">
+	<!--<aside class="col-lg-0"></aside>-->
+	<section class="col-lg-9">
+		<div class="row mblock">
+			<h1>Calorizator</h1>
+			<div class="col-lg-6 col-md-12 col-sm-12">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<table class="table">
+						<thead>
+						<tr>
+							<th>G/B</th>
+							<th>Amount of gr</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>White bread</td>
+							<td><input type="number" class="wBread"></td>
+						</tr><tr>
+							<td>Black bread</td>
+							<td><input type="number" class="bBread"></td>
+						</tr>
+
+						<tr>
+							<td>Buckwheat</td>
+							<td><input type="number" class="buckwheat"></td>
+						</tr><tr>
+							<td>Rise</td>
+							<td><input type="number" class="rise"></td>
+						</tr><tr>
+							<td>Oatmeal</td>
+							<td><input type="number" class="oatmeal"></td>
+						</tr><tr>
+							<td>Wheat</td>
+							<td><input type="number" class="wheat"></td>
+						</tr><tr>
+							<td>Peas</td>
+							<td><input type="number" class="peas"></td>
+						</tr><tr>
+							<td>Pasta</td>
+							<td><input type="number" class="pasta"></td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<table class="table">
+						<thead>
+						<tr>
+							<th>Chicken/meat</th>
+							<th>Amount of gr</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>Breast</td>
+							<td><input type="number" class="breast"></td>
+						</tr><tr>
+							<td>Liver</td>
+							<td><input type="number" class="liver"></td>
+						</tr><tr>
+							<td>Heart</td>
+							<td><input type="number" class="heart"></td>
+						</tr><tr>
+							<td>Egg</td>
+							<td><input type="number" class="egg"></td>
+						</tr><tr>
+							<td>Wing</td>
+							<td><input type="number" class="wing"></td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-12 col-sm-12 rightCol">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<table class="table">
+						<thead>
+						<tr>
+							<th>Vegetables</th>
+							<th>Amount of gr</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>Potato</td>
+							<td><input type="number" class="potato"></td>
+						</tr><tr>
+							<td>Tomato</td>
+							<td><input type="number" class="tomato"></td>
+						</tr><tr>
+							<td>Cucumber</td>
+							<td><input type="number" class="cucumber"></td>
+						</tr><tr>
+							<td>Cabage</td>
+							<td><input type="number" class="cabage"></td>
+						</tr><tr>
+							<td>Onion</td>
+							<td><input type="number" class="onion"></td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<table class="table">
+						<thead>
+						<tr>
+							<th>Soups</th>
+							<th>Amount of gr</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>Peas soup</td>
+							<td><input type="number" class="peasS"></td>
+						</tr><tr>
+							<td>Cabage soup</td>
+							<td><input type="number" class="cabageS"></td>
+						</tr><tr>
+							<td>Chicken soup</td>
+							<td><input type="number" class="chickenS"></td>
+						</tr><tr>
+							<td>Borscht</td>
+							<td><input type="number" class="borscht"></td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="col-sm-12 dbtn">
+				<button type="submit" class="btn btn-success cbtn">Count</button>
+				<button type="button" class="btn btn-warning rbtn">Reset</button>
+			</div>
+			<div class="col-sm-12"><hr></div>
+			<div class="col-sm-3 forms">Prot: <input type="number" class="nutrients protein" readonly></div>
+			<div class="col-sm-3 forms">Fats: <input type="number" class="nutrients fat" readonly></div>
+			<div class="col-sm-3 forms">Carb: <input type="number" class="nutrients carbohydrate" readonly></div>
+			<div class="col-sm-3 forms">Kcal: <input type="number" class="nutrients kcals" readonly></div>
+		</div>
+	</section>
+	<aside class="col-lg-3 col-sm-12">
+		<div class="rblock">
+			<h1>Daily ration</h1>
+			<table class="table">
+				<thead>
+				<tr>
+					<th>No.</th>
+					<th>Prot</th>
+					<th>Fats</th>
+					<th>Carb</th>
+					<th>Kcal</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<th>1.</th>
+					<td class="11"></td>
+					<td class="12"></td>
+					<td class="13"></td>
+					<td class="14"></td>
+				</tr>
+				<tr>
+					<th>2.</th>
+					<td class="21"></td>
+					<td class="22"></td>
+					<td class="23"></td>
+					<td class="24"></td>
+				</tr>
+				<tr>
+					<th>3.</th>
+					<td class="31"></td>
+					<td class="32"></td>
+					<td class="33"></td>
+					<td class="34"></td>
+				</tr>
+				<tr>
+					<th>4.</th>
+					<td class="41"></td>
+					<td class="42"></td>
+					<td class="43"></td>
+					<td class="44"></td>
+				</tr>
+				<tr>
+					<th>5.</th>
+					<td class="51"></td>
+					<td class="52"></td>
+					<td class="53"></td>
+					<td class="54"></td>
+				</tr>
+				<tr>
+					<th>6.</th>
+					<td class="61"></td>
+					<td class="62"></td>
+					<td class="63"></td>
+					<td class="64"></td>
+				</tr>
+				<tr>
+					<th>Ttl</th>
+					<td class="t1"></td>
+					<td class="t2"></td>
+					<td class="t3"></td>
+					<td class="t4"></td>
+				</tr>
+				</tbody>
+			</table>
+			<div><button type="button" class="btn btn-warning rrbtn">Clear</button></div>
+		</div>
+	</aside>
+
+	</div>
+	
+	<link rel="stylesheet" href="css/main.min.css">
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>
