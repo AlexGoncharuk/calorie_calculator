@@ -165,6 +165,7 @@ $(function() {
                     })();
                 }
 
+                //reset right button
                 $('.rrbtn').on('click', function () {
                     rasdm.length = 0;
                     $('.rblock td').each(function(){
@@ -185,6 +186,12 @@ $(function() {
         $('.mblock input').each(function(){
             $(this).val('');
         })
+    });
+
+    //add enter and escape keypress
+    $(document).keyup(function (e) {
+        if (e.keyCode === 13) $(".cbtn").click(); //enter
+        if (e.keyCode === 27) $(".rbtn").click(); //esc
     })
 
 });
