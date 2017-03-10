@@ -80,7 +80,7 @@ $(function() {
                 }
 
                 //write to right module
-                if( p && f && ch && kl != 0){
+                if(kl != 0){
                     rasdm.push(p, f, ch, kl);
 
                     (function(){
