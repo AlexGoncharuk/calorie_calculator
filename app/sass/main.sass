@@ -48,12 +48,13 @@ body
 	background: url("../img/Food-Wallpaper.jpg") no-repeat right top fixed
 	margin-top: 30px
 
+
 .mblock, .rblock
 	background: $main-bg
 	border: 1px solid $main-bg
 	border-radius: 10px
 	text-align: center
-	margin: 30px 1% 30px 0
+	margin: 0 1% 30px 0
 	h1
 		margin: 30px 0
 	.table
@@ -64,7 +65,14 @@ body
 
 
 .mblock
+	padding-top: 30px
+	.head, h1, a
+		display: inline
+		&.lang-button
+			float: right
+			margin: 5px 10px 0
 	.table
+		margin-top: 30px
 		thead
 			th
 				width: 50%
