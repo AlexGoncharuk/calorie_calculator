@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Калоризатор</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+</head>
+
+<body>
+
+	<div class="row container-fluid">
+		<!--<aside class="col-lg-0"></aside>-->
+		<section class="col-lg-9">
+		<div class="row mblock">
+			<div class="head">
+				<h1>Калоризатор</h1>
+				<a href="http://caloriecalc.kl.com.ua/" class="lang-button">
+					<img src="img/united-kingdom32px.png" alt="English">
+				</a>
+			</div>
+			<div class="col-sm-12">
+				<div class="col-lg-6 col-md-12 col-sm-12 leftCol">
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+						<table class="table">
+							<thead>
+							<tr>
+								<th>М/К</th>
+								<th>Грамм</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>Пшеничные хлеба</td>
+								<td><input type="number" class="wBread"></td>
+							</tr><tr>
+								<td>Ржаные хлеба</td>
+								<td><input type="number" class="bBread"></td>
+							</tr>
+
+							<tr>
+								<td>Гречка</td>
+								<td><input type="number" class="buckwheat"></td>
+							</tr><tr>
+								<td>Рис</td>
+								<td><input type="number" class="rise"></td>
+							</tr><tr>
+								<td>Овсянка</td>
+								<td><input type="number" class="oatmeal"></td>
+							</tr><tr>
+								<td>Пшеница</td>
+								<td><input type="number" class="wheat"></td>
+							</tr><tr>
+								<td>Горох</td>
+								<td><input type="number" class="peas"></td>
+							</tr><tr>
+								<td>Макароны</td>
+								<td><input type="number" class="pasta"></td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+						<table class="table">
+							<thead>
+							<tr>
+								<th>Курятина</th>
+								<th>Грамм</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>Грудка</td>
+								<td><input type="number" class="breast"></td>
+							</tr><tr>
+								<td>Печень</td>
+								<td><input type="number" class="liver"></td>
+							</tr><tr>
+								<td>Сердце</td>
+								<td><input type="number" class="heart"></td>
+							</tr><tr>
+								<td>Яйцо</td>
+								<td><input type="number" class="egg"></td>
+							</tr><tr>
+								<td>Крыло</td>
+								<td><input type="number" class="wing"></td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-12 col-sm-12 rightCol">
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+						<table class="table">
+							<thead>
+							<tr>
+								<th>Овощи</th>
+								<th>Грамм</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>Картофель</td>
+								<td><input type="number" class="potato"></td>
+							</tr><tr>
+								<td>Томат</td>
+								<td><input type="number" class="tomato"></td>
+							</tr><tr>
+								<td>Огурец</td>
+								<td><input type="number" class="cucumber"></td>
+							</tr><tr>
+								<td>Капуста</td>
+								<td><input type="number" class="cabage"></td>
+							</tr><tr>
+								<td>Лук</td>
+								<td><input type="number" class="onion"></td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+						<table class="table">
+							<thead>
+							<tr>
+								<th>Супы</th>
+								<th>Грамм</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>Гороховый</td>
+								<td><input type="number" class="peasS"></td>
+							</tr><tr>
+								<td>Капустняк</td>
+								<td><input type="number" class="cabageS"></td>
+							</tr><tr>
+								<td>Куриный</td>
+								<td><input type="number" class="chickenS"></td>
+							</tr><tr>
+								<td>Борщ</td>
+								<td><input type="number" class="borscht"></td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-12 dbtn">
+				<button type="button" class="btn btn-success cbtn">Считать</button>
+				<button type="button" class="btn btn-warning rbtn">Сбросить</button>
+			</div>
+			<div class="col-sm-12"><hr></div>
+			<div class="col-sm-3 forms">Белк: <input type="number" class="nutrients protein" readonly></div>
+			<div class="col-sm-3 forms">Жиры: <input type="number" class="nutrients fat" readonly></div>
+			<div class="col-sm-3 forms">Углд: <input type="number" class="nutrients carbohydrate" readonly></div>
+			<div class="col-sm-3 forms">Ккал: <input type="number" class="nutrients kcals" readonly></div>
+		</div>
+	</section>
+		<aside class="col-lg-3 col-sm-12">
+		<div class="rblock">
+			<h1>Дневной рацион</h1>
+			<table class="table">
+				<thead>
+				<tr>
+					<th>No.</th>
+					<th>Бел</th>
+					<th>Жир</th>
+					<th>Угл</th>
+					<th>Ккал</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<th>1.</th>
+					<td class="11"></td>
+					<td class="12"></td>
+					<td class="13"></td>
+					<td class="14"></td>
+				</tr>
+				<tr>
+					<th>2.</th>
+					<td class="21"></td>
+					<td class="22"></td>
+					<td class="23"></td>
+					<td class="24"></td>
+				</tr>
+				<tr>
+					<th>3.</th>
+					<td class="31"></td>
+					<td class="32"></td>
+					<td class="33"></td>
+					<td class="34"></td>
+				</tr>
+				<tr>
+					<th>4.</th>
+					<td class="41"></td>
+					<td class="42"></td>
+					<td class="43"></td>
+					<td class="44"></td>
+				</tr>
+				<tr>
+					<th>5.</th>
+					<td class="51"></td>
+					<td class="52"></td>
+					<td class="53"></td>
+					<td class="54"></td>
+				</tr>
+				<tr>
+					<th>6.</th>
+					<td class="61"></td>
+					<td class="62"></td>
+					<td class="63"></td>
+					<td class="64"></td>
+				</tr>
+				<tr>
+					<th>Итг</th>
+					<td class="t1"></td>
+					<td class="t2"></td>
+					<td class="t3"></td>
+					<td class="t4"></td>
+				</tr>
+				</tbody>
+			</table>
+			<div><button type="button" class="btn btn-warning rrbtn">Очистить</button></div>
+		</div>
+	</aside>
+	</div>
+	
+	<link rel="stylesheet" href="css/main.min.css">
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>
