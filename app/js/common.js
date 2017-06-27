@@ -1,7 +1,8 @@
 $(function() {
 
     $(document).ready(function(){
-            var  rasdm = [];
+            var rasdm = [],
+                j = 0;
             $('.cbtn').on('click', function(){
 
                 var classes = [];
@@ -70,7 +71,7 @@ $(function() {
                 //calculate
                 var p = 0, f = 0, ch = 0, kl = 0;
 
-                for(var i = 0; i <= classes.length; i++){
+                for( var i = 0; i <= classes.length; i++ ){
                     if( classes[i] > 0){
                         p = +(p + (products[i][0] * classes[i])).toFixed(2);
                         f = +(f + +(products[i][1] * classes[i])).toFixed(2);
@@ -80,7 +81,7 @@ $(function() {
                 }
 
                 //write to right module
-                if(kl != 0){
+                if( kl != 0 ){
                     rasdm.push(p, f, ch, kl);
 
                     (function(){
@@ -88,11 +89,9 @@ $(function() {
                         //total & table
                         var prot = [], fat = [], crb = [], kcal = [];
 
-                        if( rasdm.length <= 24){
+                        if( rasdm.length <= 40 ){
 
-                            for( var i = 0; i < rasdm.length; i++){
-
-                                $('.rblock').find('td').eq(i).text(rasdm[i]); //table
+                            for( var i = 0; i < rasdm.length; i++ ){
 
                                 //total
                                 if( i % 4 == 0 ) prot.push(rasdm[i]);
@@ -100,6 +99,18 @@ $(function() {
                                 if( i % 4 == 2 ) crb.push(rasdm[i]);
                                 if( i % 4 == 3 ) kcal.push(rasdm[i]);
                             }
+
+                            //aside table rows generator
+                            j++;
+                            $('.table .total').before(
+                                '<tr class="live">' +
+                                '<th>' + j + '.' + '</th>' +
+                                '<td>' + prot[j-1] + '</td>' +
+                                '<td>' + fat[j-1]  + '</td>' +
+                                '<td>' + crb[j-1]  + '</td>' +
+                                '<td>' + kcal[j-1] + '</td>' +
+                                '</tr>'
+                            );
 
                             return [
                                 $('.t1').text( +(prot.reduce(function (sum, current){return current + sum;}, 0).toFixed(2))),
@@ -114,6 +125,8 @@ $(function() {
                 //reset right button
                 $('.rrbtn').on('click', function () {
                     rasdm.length = 0;
+                    j = 0;
+                    $('.live').remove();
                     $('.rblock td').each(function(){
                         $(this).text('');
                     });
